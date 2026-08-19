@@ -39,7 +39,7 @@ class K8090:
         self.ser.reset_input_buffer()
         self._serialSend(cmd)
         response = self.ser.read(7)
-        print(list(response))
+        #print(list(response))
         return response
 
     ##################################################
@@ -51,6 +51,9 @@ class K8090:
 
     def boardGetFirmware(self):
         response = self._serialSendAndReceive(0x71)
+        print('Production year : ' + hex(response[3])) # As HEX value, so 0x10 is 2010
+        print('Production week : ' + str(int(response[4])))
+
 
     ##################################################
     # Relay functions
