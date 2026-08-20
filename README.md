@@ -18,7 +18,7 @@ $ sudo usermod -aG dialout $USER
 ## Info
 
 - The device port appears as a USB CDC/ACM serial device:
-    - Linux e.g. /dev/ttyACM0)
+    - Linux e.g. /dev/ttyACM0
     - Windows e.g. COM3
 
 ## Serial protocol
@@ -55,8 +55,6 @@ In the main function, select a demo. The demo with listener is more advanced sin
 runWithListener(k8090)
 ```
 ### Output
-
-(insert gif)
 
 #### Without listener
 
