@@ -1,3 +1,5 @@
+# Author : Jan Huijghebaert (2026)
+
 from k8090 import K8090
 import time
 
@@ -12,7 +14,7 @@ def runDemo(k8090):
     # Counter
     cnt = 0
     # Loop relay 3 on/off
-    while cnt < 3:
+    while cnt < 2:
         k8090.cmdRelayClose(0x04)
         time.sleep(0.2)
         k8090.cmdRelayOpen(0x04)
@@ -20,7 +22,7 @@ def runDemo(k8090):
         cnt = cnt + 1
     cnt = 0
     # Loop relay 5 toggle
-    while cnt < 7:
+    while cnt < 5:
         k8090.cmdRelayToggle(0x10)
         time.sleep(0.2)
         cnt = cnt + 1
@@ -37,7 +39,7 @@ def runDemo(k8090):
     time.sleep(0.3)
     # Loop all relays
     k8090.cmdRelayClose(0x55)
-    while cnt < 10:
+    while cnt < 6:
         k8090.cmdGetStatus()
         time.sleep(0.15)
         k8090.cmdRelayToggle(0xFF)
@@ -65,5 +67,5 @@ if __name__ == "__main__":
     # Edit port if needed (/dev/ttyACM0 or /dev/ttyUSB0 or COMx)
     k8090 = K8090(port='/dev/ttyACM0')
     # Select demo
-    runWithoutListener(k8090)
-    #runWithListener(k8090)
+    #runWithoutListener(k8090)
+    runWithListener(k8090)

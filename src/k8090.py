@@ -1,3 +1,5 @@
+# Author : Jan Huijghebaert (2026)
+
 import serial
 import threading
 import time
