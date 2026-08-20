@@ -44,4 +44,13 @@ There are more commands, but not implemented at this point.
 
 ## Board
 
+Event jumper on PCB:
+
+| Set    | Button actions | USB actions |
+| ------ | -------------- | ------------|
+| On     | Disabled       | Enabled     |
+| Off    | Enabled        | Enabled     |
+
+---
+
 ![K8090 board](images/k8090.jpg)
